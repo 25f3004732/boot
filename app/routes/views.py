@@ -1,7 +1,9 @@
-from flask import Blueprint 
+from flask import Blueprint, render_template 
 
-view = Blueprint('view', __name__)
+views = Blueprint('views', __name__)
 
-@view.route('/about')
-def about():
-    return '<h1>About Page view</h1>'
+@views.route('/')
+def home(): 
+    user = 'Pavan'
+    age = 20
+    return render_template('home.html', user=user, age=age)

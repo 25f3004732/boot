@@ -1,1 +1,4 @@
 .venv
+_pycahche_
+.env
+instance
