@@ -14,28 +14,28 @@
 <body>
    <nav class="navbar navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
   <div class="container-fluid">
-    <a class="navbar-brand">Our App</a>
+    <a class="navbar-brand" href="{{ url_for ('views.home')}}">Havenly</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav">
+      <ul class="navbar-nav" ms-auto>
         <li class="nav-item">
-          <a class="nav-link" href="{{ url_for('views.home') }}">Home</a>
+          <a class="nav-link" href="{{ url_for('views.home') }}">Login</a> 
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="{{ url_for('auth.login') }}">Login</a>
+          <a class="nav-link" href="{{ url_for('auth.register_customer') }}">Register as Customer</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="{{ url_for('auth.register') }}">Register</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="{{ url_for('auth.logout') }}">Logout</a>
+          <a class="nav-link" href="{{ url_for('auth.register_professional') }}">Register as Professional</a>
         </li>
       </ul>
     </div>
   </div>
 </nav>
+    <main>
+      <div class='container mt-4'>HEADER - HAVENLY</div>
+    </main>
     <main>
       {% block content %}My App{% endblock %}
         <script
